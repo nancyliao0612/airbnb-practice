@@ -46,7 +46,7 @@ nav > img {
 .card {
   padding: 0 30px;
   max-width: 235px;
-  height: 500px;
+  height: auto;
   font-size: 12px;
   position: relative;
 }
