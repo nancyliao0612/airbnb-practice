@@ -5,24 +5,14 @@ import data from "./data";
 
 function App() {
   const cards = data.map((item) => {
-    return (
-      <Card
-        id={item.id}
-        title={item.title}
-        price={item.price}
-        rating={item.stats.rating}
-        reviewCount={item.stats.reviewCount}
-        location={item.location}
-        coverImg={item.coverImg}
-      />
-    );
+    return <Card key={item.id} {...item} />;
   });
 
   return (
     <div>
       <Navbar />
       <Hero />
-      {cards}
+      <section className="cards-list">{cards}</section>
     </div>
   );
 }
